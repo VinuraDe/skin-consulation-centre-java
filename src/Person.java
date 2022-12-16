@@ -1,5 +1,3 @@
-import org.w3c.dom.css.CSSUnknownRule;
-
 import java.util.Date;
 public class Person {
     //need to use encapsulation principle
