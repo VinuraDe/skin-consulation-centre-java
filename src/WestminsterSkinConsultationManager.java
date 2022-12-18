@@ -8,12 +8,10 @@ import java.util.*;
 
 public class WestminsterSkinConsultationManager implements SkinConsultationManager {
     private Scanner scan = new Scanner(System.in);
-
-    private static final int MAX_DOCTORS = 10;
 //    public static ArrayList<Doctor> doctors = new ArrayList<Doctor>();
 //    static Doctor[] doctors = new Doctor[MAX_DOCTORS];
     public static ArrayList <Doctor> doctors = new ArrayList<Doctor>();
-
+    public static Console_Menu console_menu = new Console_Menu();
 
     @Override
     public void menu() {
@@ -50,43 +48,7 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
 
 
     private void addNewDoctor() {
-        if (doctors.size() < MAX_DOCTORS) {
-            System.out.println("\n-----------Add New Doctor-an----------");
-
-            System.out.println("Enter Name");
-            String name = scan.next();
-
-            System.out.println("Enter Surname");
-            String surname = scan.next();
-
-            System.out.println("Enter Date of Birth(dd-mm-yyyy)");
-            String inputDate = scan.next();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d-MM-yyyy");
-            LocalDate dateOfBirth = LocalDate.parse(inputDate, formatter);
-
-            System.out.println("Enter Mobile Number");
-            int mobileNumber = scan.nextInt();
-
-            System.out.println("Enter Medical Licence Number");
-            int licenseNumber = scan.nextInt();
-
-            System.out.println("Enter Specilization");
-            String specialization = scan.next();
-
-            Doctor Doctors = new Doctor();
-            Doctors.setName(name);
-            Doctors.setSurname(surname);
-            Doctors.setDateOfBirth(dateOfBirth);
-            Doctors.setMobileNumber(mobileNumber);
-            Doctors.setLicenseNumber(licenseNumber);
-            Doctors.setSpecialization(specialization);
-            doctors.add(Doctors);
-
-
-//            doctors.add(new Doctor(licenseNumber, specialization, name, surname, dateOfBirth, mobileNumber));
-        } else {
-            System.out.println("Cannot add more doctors. Maximum number of doctors reached.");
-        }
+        console_menu.channel_doctor();
     }
 
     private void deleteDoctor() {
@@ -107,14 +69,7 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
     }
 
     private void printList() {
-        System.out.println("\n--------Print Doctor List--------");
-
-//        Doctor doc = new Doctor();
-        //loop all the objects and print elements
-        for (Doctor doc: doctors) {
-            System.out.println(doc.getName());
-        }
-
+        console_menu.view_channeled_doctor_list();
     }
 
     private void saveFile() {
@@ -134,6 +89,6 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
     }
 
     private void launchGUI() {
-
+        console_menu.Gui();
     }
 }

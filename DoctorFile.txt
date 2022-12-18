@@ -1,3 +1,1 @@
-[
-Doctor-" + super.toString() + "Medical_Lisence = " + licenseNumber + ", specialization = " + specialization + 
-]
+[Doctor@238e0d81]
