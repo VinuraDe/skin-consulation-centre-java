@@ -108,7 +108,12 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
 
     private void printList() {
         System.out.println("\n--------Print Doctor List--------");
-        System.out.println(doctors);
+
+//        Doctor doc = new Doctor();
+        for (Doctor doc: doctors) {
+            System.out.println(doc.getName());
+        }
+
     }
 
     private void saveFile() {
