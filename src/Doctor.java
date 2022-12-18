@@ -7,6 +7,8 @@ public class Doctor extends Person{
     private String specialization;
     public Doctor(String name, String surname, Date dateOfBirth, String mobileNumber, String licenseNumber , String specialization ) {
         super(name, surname, dateOfBirth, mobileNumber);
+        this.licenseNumber=licenseNumber;
+        this.specialization=specialization;
     }
 
     public String getLicenseNumber() {

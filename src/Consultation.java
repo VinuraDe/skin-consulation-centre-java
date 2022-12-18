@@ -9,6 +9,13 @@ public class Consultation {
     private Doctor doctor;
     private Patient patient;
 
+    public Consultation(Doctor doctor , Patient patient, Date dateTime, double  cost){
+        this.doctor=doctor;
+        this.patient=patient;
+        this.dateTime=dateTime;
+        this.cost=cost;
+    }
+
     public Date getDateTime() {
         return this.dateTime;
     }

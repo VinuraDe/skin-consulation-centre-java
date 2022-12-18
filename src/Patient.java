@@ -1,10 +1,10 @@
 import java.util.Date;
 
 public class Patient extends Person {
-    private String patientId;
+    private int patientId;
     private String disease;
     private boolean isChecked;
-    public Patient( String patientId,String disease,boolean isChecked,String name, String surname, Date dateOfBirth, String mobileNumber) {
+    public Patient( int patientId,String disease,boolean isChecked,String name, String surname, Date dateOfBirth, String mobileNumber) {
         super(name, surname, dateOfBirth, mobileNumber);
         this.patientId=patientId;
         this.disease=disease;
@@ -16,11 +16,11 @@ public class Patient extends Person {
 
 
     // Getter and setter methods for the patient ID field
-    public String getPatientId() {
+    public int getPatientId() {
         return patientId;
     }
 
-    public void setPatientId(String patientId) {
+    public void setPatientId(int patientId) {
         this.patientId = patientId;
     }
 
