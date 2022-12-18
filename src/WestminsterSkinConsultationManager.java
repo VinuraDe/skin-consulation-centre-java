@@ -110,6 +110,7 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
         System.out.println("\n--------Print Doctor List--------");
 
 //        Doctor doc = new Doctor();
+        //loop all the objects and print elements
         for (Doctor doc: doctors) {
             System.out.println(doc.getName());
         }
