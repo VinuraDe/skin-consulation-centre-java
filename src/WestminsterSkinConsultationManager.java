@@ -1,3 +1,4 @@
+import javax.print.Doc;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,7 +10,10 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
     private Scanner scan = new Scanner(System.in);
 
     private static final int MAX_DOCTORS = 10;
-    private List<Doctor> doctors = new ArrayList<>();
+//    public static ArrayList<Doctor> doctors = new ArrayList<Doctor>();
+//    static Doctor[] doctors = new Doctor[MAX_DOCTORS];
+    public static ArrayList <Doctor> doctors = new ArrayList<Doctor>();
+
 
     @Override
     public void menu() {
@@ -69,7 +73,17 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
             System.out.println("Enter Specilization");
             String specialization = scan.next();
 
-            doctors.add(new Doctor(licenseNumber, specialization, name, surname, dateOfBirth, mobileNumber));
+            Doctor Doctors = new Doctor();
+            Doctors.setName(name);
+            Doctors.setSurname(surname);
+            Doctors.setDateOfBirth(dateOfBirth);
+            Doctors.setMobileNumber(mobileNumber);
+            Doctors.setLicenseNumber(licenseNumber);
+            Doctors.setSpecialization(specialization);
+            doctors.add(Doctors);
+
+
+//            doctors.add(new Doctor(licenseNumber, specialization, name, surname, dateOfBirth, mobileNumber));
         } else {
             System.out.println("Cannot add more doctors. Maximum number of doctors reached.");
         }

@@ -17,6 +17,10 @@ public class Person {
         this.mobileNumber = mobileNumber;
     }
 
+    public Person() {
+
+    }
+
     public String getName() {
         return name;
     }
@@ -50,8 +54,8 @@ public class Person {
     }
 
 
-    @Override
-    public String toString(){
-        return "name = " + name + ", sName = " + surname + ", dob = " + dateOfBirth + ", mobileNum = " + mobileNumber;
-    }
+//    @Override
+//    public String toString(){
+//        return "name = " + name + ", sName = " + surname + ", dob = " + dateOfBirth + ", mobileNum = " + mobileNumber;
+//    }
 }

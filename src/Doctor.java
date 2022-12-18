@@ -11,6 +11,9 @@ public class Doctor extends Person{
         this.specialization=specialization;
     }
 
+    public Doctor() {
+        super();
+    }
 
 
     public int getLicenseNumber() {
@@ -29,9 +32,9 @@ public class Doctor extends Person{
         this.specialization = specialization;
     }
 
-    @Override
-    public String toString(){
-        return "\nDoctor-\" + super.toString() + \"Medical_Lisence = \" + licenseNumber + \", specialization = \" + specialization + \n";
-    }
+//    @Override
+//    public String toString(){
+//        return "\nDoctor-\" + super.toString() + \"Medical_Lisence = \" + licenseNumber + \", specialization = \" + specialization + \n";
+//    }
 
 }

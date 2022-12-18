@@ -40,9 +40,9 @@ public class Patient extends Person {
         this.isChecked=isChecked;
     }
 
-    @Override
-    public String toString(){
-        return "Patient{" + super.toString() + "patientId=" + patientId + ", sickness=" + disease + ", insured=" + isChecked + '}';
-    }
+//    @Override
+//    public String toString(){
+//        return "Patient{" + super.toString() + "patientId=" + patientId + ", sickness=" + disease + ", insured=" + isChecked + '}';
+//    }
 }
 
