@@ -1,10 +1,10 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Patient extends Person {
     private int patientId;
     private String disease;
     private boolean isChecked;
-    public Patient( int patientId,String disease,boolean isChecked,String name, String surname, Date dateOfBirth, String mobileNumber) {
+    public Patient(int patientId, String disease, boolean isChecked, String name, String surname, LocalDate dateOfBirth, int mobileNumber) {
         super(name, surname, dateOfBirth, mobileNumber);
         this.patientId=patientId;
         this.disease=disease;

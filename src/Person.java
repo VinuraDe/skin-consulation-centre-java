@@ -1,15 +1,16 @@
-import java.util.Date;
+import java.time.LocalDate;
+
 public class Person {
     //need to use encapsulation principle
     //holding information about the name, surname, date of birth and mobile number
     private String name;
     private String surname;
-    private Date dateOfBirth;
-    private String mobileNumber;
+    private LocalDate dateOfBirth;
+    private int mobileNumber;
 
     //constructor
 
-    public Person(String name, String surname, Date dateOfBirth, String mobileNumber) {
+    public Person(String name, String surname, LocalDate dateOfBirth, int mobileNumber) {
         this.name = name;
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
@@ -32,21 +33,22 @@ public class Person {
         this.surname = surname;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getMobileNumber() {
+    public int getMobileNumber() {
         return mobileNumber;
     }
 
-    public void setMobileNumber(String mobileNumber) {
+    public void setMobileNumber(int mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
+
 
     @Override
     public String toString(){
